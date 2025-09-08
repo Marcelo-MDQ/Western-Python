@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block titulo %} Directores {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card">
+    <div class="card-body">
+
+        {% if directores_e_imgs %}
+            <h4 class="card-title" align="center">PRINCIPALES</h4>
+            <div class="row justify-content-md-center">
+                {% for director_img in directores_e_imgs %}
+                    <div class="col-md-auto">
+                        <a href="{% url 'buscar_director' director_img.nombredirector %}">
+                        <img class="avataractor_chico" src="{{ director_img.imagendirector.url }}" >
+                        </a>
+                    </div>
+                {% endfor %}        
+            </div>
+            <br><br>
+        {% endif %}
+
+        {% if directores_d_imgs %}
+            <h4 class="card-title" align="center">DESTACADOS</h4>
+            <div class="row justify-content-md-center">
+                {% for director_img in directores_d_imgs %}
+                    <div class="col-md-auto">
+                        <a href="{% url 'buscar_director' director_img.nombredirector %}">
+                        <img class="avataractor_chico" src="{{ director_img.imagendirector.url }}" >
+                        </a>
+                    </div>
+                {% endfor %}        
+            </div>
+            <br><br>
+        {% endif %}
+
+        <!--
+        <div class="row justify-content-md-center">
+                {% for director in directores %}
+                    <div class="col-md-auto"><a href="{% url 'buscar_director' director %}">{{ director }}</a>
+                    </div>
+                {% endfor %}
+        </div>
+        -->
+        
+    </div>
+
+</div> 
+
+{% endblock %}
