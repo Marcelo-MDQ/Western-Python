@@ -30,11 +30,7 @@ SECRET_KEY = 'django-insecure-(!m1(#qsrm86(qzsi$owwqsnqyj_ovzp*rhw7uygzvon8vf1!q
 
 # en produccion western
 DEBUG = False
-<<<<<<< HEAD
 ALLOWED_HOSTS = ['western.pythonanywhere.com']
-=======
-ALLOWED_HOSTS = ['inspectormorse.pythonanywhere.com']
->>>>>>> e98e131a351e6f2b66ae9bd1604893aa7b1cd48b
 
 # Application definition
 
@@ -101,28 +97,17 @@ AUTH_PASSWORD_VALIDATORS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD
         'NAME': 'western$western',
         'USER': 'western',
         'PASSWORD': 'Romeo1368',
        'HOST': 'western.mysql.pythonanywhere-services.com',
-=======
-        'NAME': 'inspectormorse$inspectormorse',
-        'USER': 'inspectormorse',
-        'PASSWORD': 'Romeo1368',
-       'HOST': 'inspectormorse.mysql.pythonanywhere-services.com',
->>>>>>> e98e131a351e6f2b66ae9bd1604893aa7b1cd48b
     }
 }
 
 #DATABASES = {  
 #  'default': {  
 #     'ENGINE': 'django.db.backends.mysql',  
-<<<<<<< HEAD
 #     'NAME': 'western',  
-=======
-#     'NAME': 'inspectormorse',  
->>>>>>> e98e131a351e6f2b66ae9bd1604893aa7b1cd48b
 #     'USER': 'root',
 #     'PASSWORD': '',
 #     'HOST': 'localhost',
@@ -149,11 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
-<<<<<<< HEAD
 STATIC_ROOT = BASE_DIR / "staticfiles"  # para collectstatic
-=======
-STATIC_ROOT = BASE_DIR / "staticfiles"
->>>>>>> e98e131a351e6f2b66ae9bd1604893aa7b1cd48b
 STATIC_URL = "static/"
 
 LOGIN_URL = "/iniciarsesion"
@@ -165,7 +146,6 @@ LOGIN_URL = "/iniciarsesion"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-<<<<<<< HEAD
 # antes tenía esto
 # MEDIA_URL = ''
 # MEDIA_ROOT = os.path.join(BASE_DIR, '')
@@ -173,11 +153,6 @@ LOGIN_URL = "/iniciarsesion"
 # sugerencia de ChatGPT
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"          # <— CLAVE
-=======
-
-MEDIA_ROOT = os.path.join(BASE_DIR, '')
-MEDIA_URL = ''
->>>>>>> e98e131a351e6f2b66ae9bd1604893aa7b1cd48b
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
