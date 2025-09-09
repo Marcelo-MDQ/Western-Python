@@ -4,7 +4,6 @@ from . import views
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
 
-<<<<<<< HEAD
 # sugerencia de chatGPT
 from django.conf.urls.static import static
 
@@ -38,16 +37,4 @@ urlpatterns = [
     path('resenia/<int:id>/',views.reseniaPelicula, name = 'resenia_Pelicula'),
     path('buscaractor/<str:actor>/',views.buscarActor, name = 'buscar_actor'),
     path('buscardirector/<str:director>/',views.buscarDirector, name = 'buscar_director')
-]
-# antes estaba esto
-# ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-=======
-urlpatterns = [
-    path('', views.inicio, name='inicio'),
-    path('capitulos', views.capitulos, name='capitulos'),
-    path('resenia/<int:id>/',views.reseniaCapitulo, name = 'resenia_Capitulo'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> e98e131a351e6f2b66ae9bd1604893aa7b1cd48b
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
