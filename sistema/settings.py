@@ -100,7 +100,7 @@ DATABASES = {
         'NAME': 'western$western',
         'USER': 'western',
         'PASSWORD': 'Romeo1368',
-       'HOST': 'western.mysql.pythonanywhere-services.com',
+        'HOST': 'western.mysql.pythonanywhere-services.com',
     }
 }
 

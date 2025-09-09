@@ -21,11 +21,10 @@
                   <h1 class="display-8 font-italic">{{ peliculaultima.nombre }} ({{ peliculaultima.anio }})</h1>
 
                   {% if peliculaultima.imagenlocal %}
-                      {% load static %}
                       {% if peliculaultima.color %}
-                          <img src="{% static peliculaultima.imagenlocal %}" width="100%" float="right" srcset="">
+                          <img src="{{ peliculaultima.imagenlocal.url }}" width="100%" float="right" srcset="">
                       {% else %}
-                          <img class="filtro-bn" src="{% static peliculaultima.imagenlocal %}" width="100%" float="right" srcset="">
+                          <img class="filtro-bn" src="{{ peliculaultima.imagenlocal.url }}" width="100%" float="right" srcset="">
                       {% endif %}     
                       {% else %}
                           <img src="" width="100%" float="right" srcset="">
@@ -148,11 +147,10 @@
         <div class="container  " align="center">
                 {% for pelicula in peliculas %}
                     <a href="{% url 'resenia_Pelicula' pelicula.id %}">
-                        {% load static %}
                         {% if pelicula.color %}
-                          <img class="cajita" src="{% static pelicula.imagenlocal %}" width="240">
+                          <img class="cajita" src="{{ pelicula.imagenlocal.url }}" width="240">
                         {% else %}
-                          <img class="cajita filtro-bn" src="{% static pelicula.imagenlocal %}" width="240">
+                          <img class="cajita filtro-bn" src="{{ pelicula.imagenlocal.url }}" width="240">
                         {% endif %}
                         </a>
                 {% endfor %}
